@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetCoreMovieTheater.Models.Context;
 
-namespace NetCoreMovieTheater.Migrations
+namespace MovieTheater.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210309100445_reservationAppUser")]
-    partial class reservationAppUser
+    [Migration("20210310072712_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

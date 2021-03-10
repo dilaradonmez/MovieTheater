@@ -32,7 +32,7 @@ namespace NetCoreMovieTheater
             services.AddControllersWithViews();
 
             //context
-            services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer("server=.;database=MovieTheaterDB;Trusted_Connection=True;"));
+            services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer("server=.;database=MovieTheaterDB;uid=sa;pwd=1234;"));
 
             //Identity
             services.AddIdentity<AppUser, IdentityRole>(x=> {

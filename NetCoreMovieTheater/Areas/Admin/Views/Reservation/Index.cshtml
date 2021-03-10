@@ -1,0 +1,43 @@
+﻿@model List<Reservation>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Movie Name</th>
+                    <th>Movie Genres</th>
+                    <th>Sallon Name</th>
+                    <th>Session Time</th>
+                    <th>Last Day</th>
+                    <th>First Day</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var reservation in Model)
+                {
+                <tr>
+                    <td>@reservation.Movie.MovieName</td>
+                    <td>@reservation.Movie.MovieGenres</td>
+                    <td>@reservation.Salloon.SalloonName</td>
+                    <td>@reservation.Session.SessionTime</td>
+                    <td>@reservation.Week.FirstDay</td>
+                    <td>@reservation.Week.LastDay</td>
+
+                    <td>
+                        @Html.ActionLink("Remove", "RemoveReservation", new { Id = reservation.Id }, new { @class = "btn btn-   danger" })
+                        @Html.ActionLink("Update", "UpdateReservation", new { Id = reservation.Id }, new { @class = "btn btn-    warning" })
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
