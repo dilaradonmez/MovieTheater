@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace NetCoreMovieTheater.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class SalloonController : Controller
     {
         private readonly ISallonRepository sallonRepository;
